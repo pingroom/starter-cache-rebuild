@@ -1,0 +1,58 @@
+{
+  "buildId": "card-assets",
+  "title": "Card asset build",
+  "sources": [
+    {
+      "id": "data",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    {
+      "id": "style",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "base",
+      "recipeHash": "3333333333333333333333333333333333333333333333333333333333333333",
+      "environmentHash": "4444444444444444444444444444444444444444444444444444444444444444",
+      "sourceIds": [
+        "data"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "catalog",
+      "recipeHash": "5555555555555555555555555555555555555555555555555555555555555555",
+      "environmentHash": "4444444444444444444444444444444444444444444444444444444444444444",
+      "sourceIds": [],
+      "dependencies": [
+        "base"
+      ]
+    },
+    {
+      "id": "pages",
+      "recipeHash": "6666666666666666666666666666666666666666666666666666666666666666",
+      "environmentHash": "4444444444444444444444444444444444444444444444444444444444444444",
+      "sourceIds": [
+        "style"
+      ],
+      "dependencies": [
+        "base"
+      ]
+    }
+  ],
+  "cache": [],
+  "targets": [
+    {
+      "id": "catalog",
+      "label": "Product card catalog",
+      "taskId": "catalog"
+    },
+    {
+      "id": "pages",
+      "label": "Printable card pages",
+      "taskId": "pages"
+    }
+  ]
+}
